@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "xyz.yusufyaser.aaafk.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "OnGameMessage",
+    "OnTitle"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

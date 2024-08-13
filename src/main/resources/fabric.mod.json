@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "anti-anti-afk",
+	"version": "${version}",
+	"name": "Anti Anti AFK",
+	"description": "Disable AFK Kick on servers that require head movement",
+	"authors": [
+		"Yusuf Kelany (YusufYaser)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/anti-anti-afk/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"xyz.yusufyaser.aaafk.AntiAntiAFK"
+		],
+		"client": [
+			"xyz.yusufyaser.aaafk.AntiAntiAFKClient"
+		]
+	},
+	"mixins": [
+		"anti-anti-afk.mixins.json",
+		{
+			"config": "anti-anti-afk.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
