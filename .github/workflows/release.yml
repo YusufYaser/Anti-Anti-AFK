@@ -54,8 +54,7 @@ jobs:
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: "v${{ env.RELEASE_VERSION }}"
           prerelease: false
-          title: "${{ env.RELEASE_VERSION }}"
           files: |
-            build/libs/anti-anti-afk-${{ env.RELEASE_VERSION }}.jar
+            build/libs/*.!(sources).jar
