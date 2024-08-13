@@ -25,6 +25,13 @@ jobs:
           distribution: 'microsoft'
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
+      - name: Extract version from branch name
+        env:
+          REF: ${{ github.ref }}
+        run: |
+          BRANCH_NAME=${REF#refs/heads/}
+          version=${BRANCH_NAME#v}
+          echo "RELEASE_VERSION=$version" >> $GITHUB_ENV
       - name: update version
         run: |
           BRANCH=v${RELEASE_VERSION}
@@ -43,13 +50,6 @@ jobs:
         with:
           name: Artifacts
           path: build/libs/
-      - name: Extract version from branch name
-        env:
-          REF: ${{ github.ref }}
-        run: |
-          BRANCH_NAME=${REF#refs/heads/}
-          version=${BRANCH_NAME#v}
-          echo "RELEASE_VERSION=$version" >> $GITHUB_ENV
       - name: release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
