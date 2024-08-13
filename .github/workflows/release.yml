@@ -38,7 +38,7 @@ jobs:
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
           git checkout $BRANCH
-          sed -i "s/mod_version=0.0.0/mod_version='${RELEASE_VERSION}',/" gradle.properties
+          sed -i "s/mod_version=0.0.0/mod_version='${RELEASE_VERSION}'/" gradle.properties
           git add gradle.properties
           git commit -m "update version"
           git push
