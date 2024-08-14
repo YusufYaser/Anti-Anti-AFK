@@ -8,10 +8,10 @@
 		"Yusuf Kelany (YusufYaser)"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/anti-anti-afk",
+		"sources": "https://github.com/YusufYaser/Anti-Anti-AFK"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/anti-anti-afk/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -31,7 +31,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.21",
+		"minecraft": ">=1.21 <1.22",
 		"java": ">=21",
 		"fabric-api": "*"
 	},
