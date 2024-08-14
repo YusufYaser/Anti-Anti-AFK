@@ -16,7 +16,7 @@ public class AntiAntiAFKClient implements ClientModInitializer {
         KeyBinding openMenuBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.anti-anti-afk.menu",
                 InputUtil.Type.KEYSYM,
-				GLFW.GLFW_KEY_M,
+				GLFW.GLFW_KEY_F10,
                 "category.anti-anti-afk"
         ));
 
